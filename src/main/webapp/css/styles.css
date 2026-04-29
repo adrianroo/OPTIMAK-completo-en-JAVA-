@@ -1,0 +1,1620 @@
+/* --------------------------------------------
+estilos generales
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-cobalto: #2563eb;
+    --azul-oscuro: #1e40af;
+    --gris-oscuro: #334155;
+    --negro: #1e293b;
+    --blanco: #ffffff;
+    --gris-claro: #f5f7fa;
+    --gris-medio: #64748b;
+    --verde: #10b981;
+    --amarillo: #f59e0b;
+    --rojo: #dc2626;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--gris-claro);
+    color: var(--negro);
+}
+
+/* --------------------------------------------------------------------------
+HEADER PRINCIPAL
+*/
+
+.header-principal {
+    background: var(--blanco);
+    border-bottom: 2px solid #e2e8f0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo-img {
+    height: 45px;
+}
+
+.header-titulo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--negro);
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--gris-oscuro);
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover {
+    color: var(--azul-cobalto);
+}
+
+.header-nav a.active {
+    color: var(--azul-cobalto);
+    border-bottom: 3px solid var(--azul-cobalto);
+    padding-bottom: 3px;
+}
+
+.header-usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gris-claro);
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.header-usuario-texto {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gris-oscuro);
+}
+
+/* ----------------------------------------------------------
+contenedor principal
+*/
+
+.contenedor-principal {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.titulo-seccion {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--negro);
+    margin-bottom: 20px;
+}
+
+.subtitulo-seccion {
+    font-size: 14px;
+    color: var(--gris-medio);
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------------------------------
+   BOTONES
+*/
+
+.btn-principal {
+    background: var(--azul-cobalto);
+    color: var(--blanco);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-principal:hover {
+    background: var(--azul-oscuro);
+}
+
+.btn-secundario {
+    background: var(--blanco);
+    color: var(--azul-cobalto);
+    padding: 12px 24px;
+    border: 2px solid var(--azul-cobalto);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secundario:hover {
+    background: #eff6ff;
+}
+
+.btn-icono {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--gris-oscuro);
+    font-size: 18px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn-icono:hover {
+    background: var(--gris-claro);
+}
+
+/* ------------------------------------------------------
+formularios
+*/
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gris-oscuro);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--negro);
+    transition: border 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--azul-cobalto);
+}
+
+.form-select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--negro);
+    background: var(--blanco);
+    cursor: pointer;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--negro);
+    resize: vertical;
+    min-height: 100px;
+}
+
+/*------------------------------------------------------------
+   TABLAS
+*/
+
+.tabla-contenedor {
+    overflow-x: auto;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: var(--gris-claro);
+}
+
+th {
+    padding: 16px;
+    text-align: left;
+    color: var(--gris-oscuro);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 16px;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+/*------------------------------------------------------------------------------
+cuadritos indicadores de estado de filas
+*/
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.badge-proceso {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-pendiente {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-terminado {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.badge-pausado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.badge-excelente {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.badge-bueno {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-regular {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-bajo {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/*----------------------------------------------------------------
+   TABS (PESTAÑAS)
+*/
+
+.tabs-contenedor {
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 24px;
+}
+
+.tab {
+    padding: 14px 28px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--gris-medio);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab:hover {
+    color: var(--azul-cobalto);
+}
+
+.tab.active {
+    color: var(--azul-cobalto);
+    border-bottom-color: var(--azul-cobalto);
+}
+
+/* -------------------------------------------------------------
+modales superpuestos
+*/
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-contenido {
+    background: var(--blanco);
+    border-radius: 16px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: var(--azul-cobalto);
+    color: var(--blanco);
+    padding: 24px 28px;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modal-close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: var(--blanco);
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body {
+    padding: 28px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 2px solid #e2e8f0;
+}
+
+/* -------------------------------------------------------------------------------------
+   CARDS
+*/
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--blanco);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    border-color: var(--azul-cobalto);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.card.seleccionada {
+    border-color: var(--azul-cobalto);
+    background: #eff6ff;
+}
+
+/* ------------------------------------------------------------------
+pagina de inicio de sesion
+  */
+
+.login-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-box {
+    background: var(--blanco);
+    border-radius: 16px;
+    padding: 48px 40px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.login-logo {
+    width: 200px;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+.login-titulo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--negro);
+    margin-bottom: 8px;
+}
+
+.login-subtitulo {
+    text-align: center;
+    font-size: 14px;
+    color: var(--gris-medio);
+    margin-bottom: 30px;
+}
+
+.role-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.role-option {
+    position: relative;
+}
+
+.role-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.role-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.role-label:hover {
+    border-color: var(--azul-cobalto);
+    background: #f8fafc;
+}
+
+.role-option input[type="radio"]:checked + .role-label {
+    border-color: var(--azul-cobalto);
+    background: #eff6ff;
+}
+
+.role-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/*----------------------------------------------------
+   DASHBOARD
+*/
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-card {
+    background: var(--gris-claro);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.dashboard-card h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--gris-oscuro);
+}
+
+.info-panel {
+    background: var(--gris-oscuro);
+    color: var(--blanco);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.info-panel p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.info-panel strong {
+    color: var(--azul-cobalto);
+}
+
+/* ------------------------------------------------------
+   CARDS DE EFICIENCIA
+*/
+
+.efficiency-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.efficiency-card {
+    background: var(--blanco);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.efficiency-label {
+    font-size: 12px;
+    color: var(--gris-medio);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.efficiency-value {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.efficiency-value.individual {
+    color: var(--azul-cobalto);
+}
+
+.efficiency-value.modular {
+    color: var(--verde);
+}
+
+/* ---------------------------------------------------------------------
+   BOTÓN GRANDE AZUL DE PULSACIÓN 
+*/
+
+.pulsation-container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.pulsation-button {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: var(--azul-cobalto);
+    color: var(--blanco);
+    border: none;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 12px 40px rgba(37, 99, 235, 0.5);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pulsation-button:active {
+    transform: scale(0.95);
+}
+
+.counter-display {
+    background: var(--blanco);
+    border-radius: 16px;
+    padding: 20px 40px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.counter-label {
+    font-size: 12px;
+    color: var(--gris-medio);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.counter-value {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--azul-cobalto);
+}
+
+/* ---------------------------------------------------------
+   Cuadrito indicador de progreso
+*/
+
+.progress-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: var(--gris-medio);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.step.active {
+    background: var(--azul-cobalto);
+    color: var(--blanco);
+}
+
+.step.completed {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+.step-line {
+    width: 60px;
+    height: 3px;
+    background: #e2e8f0;
+}
+
+.step-line.active {
+    background: var(--azul-cobalto);
+}
+
+/* ------______________________________________________________
+   RESPONSIVE DESIGN
+ */
+
+@media (max-width: 768px) {
+    .header-principal {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contenedor-principal {
+        padding: 0 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .efficiency-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pulsation-button {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* ----------------------------------------------------------
+   BUSCADOR
+*/
+
+.search-box {
+    position: relative;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 16px 12px 45px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gris-medio);
+}
+
+/* ---------------------------------------------------------------------------------------
+   BARRA DE ACCIONES
+*/
+
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* -----------------------------------------------------------------------
+  grid formulario
+*/
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid-full {
+    grid-column: 1 / -1;
+}
+
+/* ---------------------------------------------------------------------
+   INFO BOX
+ */
+
+.info-box {
+    background: #eff6ff;
+    border-left: 4px solid var(--azul-cobalto);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    font-size: 13px;
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------------
+   NOTIFICACIONES (OVERLAYS)
+*/
+
+.notification-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-overlay.show {
+    display: flex;
+}
+
+.notification {
+    background: var(--blanco);
+    border-radius: 16px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.notification-header {
+    padding: 20px;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--blanco);
+}
+
+.notification-header.warning {
+    background: var(--amarillo);
+}
+
+.notification-header.error {
+    background: var(--rojo);
+}
+
+.notification-body {
+    padding: 20px;
+}
+
+.notification-body p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+/* ----------------------------------------------------------
+A partir de aqui en adelante hago una actualizacion al css
+*/
+/* 
+   BADGE MÓDULO (header operario)
+ */
+.badge-modulo {
+    background: #2563eb;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------------------
+   INDICADOR DE PASOS (selección lote / operación)
+ */
+.pasos-indicador {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.paso {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.paso-numero {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.paso-texto {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.paso-activo .paso-numero {
+    background: #2563eb;
+    color: #fff;
+}
+
+.paso-activo .paso-texto {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.paso-inactivo .paso-numero {
+    background: #e2e8f0;
+    color: #94a3b8;
+}
+
+.paso-inactivo .paso-texto {
+    color: #94a3b8;
+}
+
+.paso-completado .paso-numero {
+    background: #16a34a;
+    color: #fff;
+}
+
+.paso-completado .paso-texto {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.paso-linea {
+    flex: 1;
+    height: 2px;
+    background: #e2e8f0;
+    min-width: 30px;
+}
+
+.paso-linea-completada {
+    background: #16a34a;
+}
+
+/* -------------------------------------------------------------------------------
+   ALERTA INFO (aviso azul informativo)
+ */
+.alerta-info {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1e40af;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------------------------------------------------------------------------
+   TARJETAS DE LOTE (selección de lote operario)
+  */
+.lote-card {
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    background: #fff;
+}
+
+.lote-card:hover {
+    border-color: #2563eb;
+    background: #f8fafc;
+}
+
+.lote-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.lote-om {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.lote-card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.lote-dato {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.lote-dato-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.lote-dato-valor {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.lote-card-footer {
+    margin-top: 4px;
+}
+
+/* ----------------------------------------------------------------------------
+   TARJETAS DE OPERACIÓN (selección de operación)
+ */
+.operacion-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    background: #fff;
+}
+
+.operacion-card:hover {
+    border-color: #2563eb;
+    background: #f8fafc;
+}
+
+.operacion-card-activa {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.operacion-numero {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.operacion-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.operacion-nombre {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.operacion-detalle {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.operacion-maquina {
+    font-size: 11px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+}
+
+.operacion-sam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+
+.sam-valor {
+    font-size: 16px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.sam-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.operacion-accion {
+    flex-shrink: 0;
+}
+
+.btn-sm {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/*---------------------------------------------------------------------------------
+   PANEL DE PULSACIÓN
+ */
+.pulsacion-info-panel {
+    background: #1e3a5f;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 4px;
+}
+
+.pulsacion-info-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.pulsacion-info-fila:last-child {
+    border-bottom: none;
+}
+
+.pulsacion-info-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pulsacion-info-valor {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* -----------------------------------------
+   TARJETA DE EFICIENCIA
+*/
+.eficiencia-card {
+    background: #1e3a5f;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.eficiencia-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.eficiencia-valor {
+    font-size: 32px;
+    font-weight: 800;
+    color: #4ade80;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.eficiencia-estado {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------
+   PANEL DERECHO PULSACIÓN
+ */
+.pulsacion-panel-derecho {
+    background: #1e40af;
+    border-radius: 12px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    min-height: 420px;
+    justify-content: center;
+}
+
+.unidades-completadas-caja {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 16px 32px;
+    text-align: center;
+    width: 100%;
+}
+
+.unidades-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.unidades-numero {
+    font-size: 52px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+}
+
+/* ----------------------------------------------------------------------------
+   BOTÓN PRINCIPAL DE PULSACIÓN
+*/
+.btn-pulsacion {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #2563eb;
+    border: 6px solid rgba(255,255,255,0.3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-pulsacion i {
+    font-size: 42px;
+}
+
+.btn-pulsacion:hover {
+    background: #1d4ed8;
+    border-color: rgba(255,255,255,0.5);
+}
+
+.btn-pulsacion:active {
+    background: #1e3a8a;
+}
+
+.tiempo-ultima-pulsacion {
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ---------------------------------------
+   badges DE NOTIFICACIÓN
+ */
+.badge-notificacion {
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.badge-personal {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.badge-general {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* ---------------------------------------------------------------
+   CAJAS DE ALERTA EN MODALES
+*/
+.alerta-eficiencia-caja {
+    background: #fee2e2;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.alerta-porcentaje {
+    background: #ef4444;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 10px 14px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.cuello-operacion-caja {
+    background: #fef3c7;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cuello-info-caja {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* 
+   RESPONSIVE
+*/
+@media (max-width: 768px) {
+
+    .pasos-indicador {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .paso-linea {
+        width: 2px;
+        height: 20px;
+        min-width: unset;
+    }
+
+    .operacion-card {
+        flex-wrap: wrap;
+    }
+
+    .pulsacion-panel-derecho {
+        grid-column: 1 / -1;
+        min-height: 320px;
+    }
+
+    .btn-pulsacion {
+        width: 140px;
+        height: 140px;
+    }
+
+    .btn-pulsacion i {
+        font-size: 32px;
+    }
+
+    .unidades-numero {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .lote-card-body {
+        grid-template-columns: 1fr;
+    }
+
+    .operacion-sam {
+        display: none;
+    }
+}
+
+/* ================================================================
+   MÓDULO 6 — INFORMES
+================================================================ */
+
+/* badge-estado: contenedor base para los badges de color */
+.badge-estado {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* badge-en-proceso: alias de badge-proceso (azul) */
+.badge-en-proceso {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* Tarjeta de resumen numérico para informes */
+.informe-card-resumen {
+    background: var(--gris-claro);
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.informe-card-valor {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.informe-card-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gris-medio);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ================================================================
+   MÓDULO 7 — MONITOREO EN TIEMPO REAL
+================================================================ */
+
+.monitoreo-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.monitoreo-indicador-vivo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gris-medio);
+}
+
+.monitoreo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--verde);
+    flex-shrink: 0;
+    animation: monitoreo-pulso 2s ease-in-out infinite;
+}
+
+@keyframes monitoreo-pulso {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.monitoreo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.monitoreo-card {
+    background: var(--blanco);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.2s;
+}
+
+.monitoreo-card-sinactividad {
+    opacity: 0.65;
+}
+
+.monitoreo-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.monitoreo-modulo-id {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--negro);
+}
+
+.monitoreo-eficiencia-bloque {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.monitoreo-eficiencia-numero {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.monitoreo-eficiencia-buena  { color: #10b981; }
+.monitoreo-eficiencia-regular { color: #f59e0b; }
+.monitoreo-eficiencia-baja   { color: #dc2626; }
+.monitoreo-eficiencia-sindata { color: #94a3b8; }
+
+.monitoreo-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.monitoreo-stat {
+    text-align: center;
+}
+
+.monitoreo-stat-valor {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--negro);
+    line-height: 1;
+}
+
+.monitoreo-stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gris-medio);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-top: 3px;
+}
+
+.monitoreo-stat-alerta .monitoreo-stat-valor {
+    color: #dc2626;
+}
+
+.monitoreo-toggle-btn {
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gris-medio);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.monitoreo-toggle-btn:hover {
+    background: #f8fafc;
+    color: var(--azul-cobalto);
+    border-color: var(--azul-cobalto);
+}
+
+.monitoreo-detalle {
+    display: none;
+    margin-top: 14px;
+    border-top: 2px solid #e2e8f0;
+    padding-top: 14px;
+}
+
+.monitoreo-detalle.abierto {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .monitoreo-grid {
+        grid-template-columns: 1fr;
+    }
+    .monitoreo-eficiencia-numero {
+        font-size: 34px;
+    }
+}

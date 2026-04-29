@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>OPTIMAK</display-name>
+
+    <!-- ============================================================
+         FILTRO DE SESIÓN — intercepta toda petición para verificar
+         que el usuario esté autenticado y tenga el rol correcto
+    ============================================================ -->
+    <filter>
+        <filter-name>FiltroSesion</filter-name>
+        <filter-class>co.optimak.filtro.FiltroSesion</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FiltroSesion</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ============================================================
+         SERVLETS — MÓDULO 1: AUTENTICACIÓN
+    ============================================================ -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.AdminDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <url-pattern>/admin-dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OperarioDashboardServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.OperarioDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OperarioDashboardServlet</servlet-name>
+        <url-pattern>/operario-dashboard</url-pattern>
+    </servlet-mapping>
+
+    <!-- ============================================================
+         SERVLETS — MÓDULO 2: GESTIÓN DE PRODUCCIÓN
+         (referencias, operaciones y lotes en un solo servlet con tabs)
+    ============================================================ -->
+    <servlet>
+        <servlet-name>ProduccionServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.ProduccionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProduccionServlet</servlet-name>
+        <url-pattern>/produccion</url-pattern>
+    </servlet-mapping>
+
+    <!-- ============================================================
+         SERVLETS — MÓDULO 4: PERSONAL
+         (empleados, módulos operativos y bloques de horario)
+    ============================================================ -->
+    <servlet>
+        <servlet-name>PersonalServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.PersonalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonalServlet</servlet-name>
+        <url-pattern>/personal</url-pattern>
+    </servlet-mapping>
+
+    <!-- ============================================================
+         SERVLETS — MÓDULO 5: FLUJO OPERARIO
+         (selección de lote, operación y registro de pulsaciones)
+    ============================================================ -->
+    <servlet>
+        <servlet-name>SeleccionLoteServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.SeleccionLoteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SeleccionLoteServlet</servlet-name>
+        <url-pattern>/seleccion-lote</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SeleccionOperacionServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.SeleccionOperacionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SeleccionOperacionServlet</servlet-name>
+        <url-pattern>/seleccion-operacion</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PulsacionServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.PulsacionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PulsacionServlet</servlet-name>
+        <url-pattern>/pulsacion</url-pattern>
+    </servlet-mapping>
+
+    <!-- ============================================================
+         SERVLETS — MÓDULO 6: INFORMES HISTÓRICOS
+    ============================================================ -->
+    <servlet>
+        <servlet-name>InformesServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.InformesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InformesServlet</servlet-name>
+        <url-pattern>/informes</url-pattern>
+    </servlet-mapping>
+
+    <!-- ============================================================
+         SERVLETS — MÓDULO 7: MONITOREO EN TIEMPO REAL
+    ============================================================ -->
+    <servlet>
+        <servlet-name>MonitoreoServlet</servlet-name>
+        <servlet-class>co.optimak.servlet.MonitoreoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MonitoreoServlet</servlet-name>
+        <url-pattern>/monitoreo</url-pattern>
+    </servlet-mapping>
+
+    <!-- Página de inicio: siempre va al login -->
+    <welcome-file-list>
+        <welcome-file>login</welcome-file>
+    </welcome-file-list>
+
+</web-app>
